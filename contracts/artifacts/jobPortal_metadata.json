@@ -1,0 +1,332 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_phone",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_home_address",
+						"type": "string"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_age",
+						"type": "uint8"
+					},
+					{
+						"internalType": "string",
+						"name": "_skills",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_workExp",
+						"type": "string"
+					},
+					{
+						"internalType": "enum jobPortal.jobType",
+						"name": "_type",
+						"type": "uint8"
+					}
+				],
+				"name": "addApplicant",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "_title",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_salary",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_expirence",
+						"type": "string"
+					}
+				],
+				"name": "addJob",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_applicantAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint8",
+						"name": "_rating",
+						"type": "uint8"
+					}
+				],
+				"name": "addRating",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "fetchApplicant",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "phone",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "home_address",
+								"type": "string"
+							},
+							{
+								"internalType": "uint8",
+								"name": "age",
+								"type": "uint8"
+							},
+							{
+								"internalType": "uint8",
+								"name": "rating",
+								"type": "uint8"
+							},
+							{
+								"internalType": "string",
+								"name": "skills",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "work_exp",
+								"type": "string"
+							},
+							{
+								"internalType": "enum jobPortal.jobType",
+								"name": "job_preference",
+								"type": "uint8"
+							}
+						],
+						"internalType": "struct jobPortal.applicant_details",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_address",
+						"type": "address"
+					}
+				],
+				"name": "fetchApplicantType",
+				"outputs": [
+					{
+						"internalType": "enum jobPortal.jobType",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_id",
+						"type": "uint256"
+					}
+				],
+				"name": "fetchJob",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "title",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "salary",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "expirence",
+								"type": "string"
+							},
+							{
+								"internalType": "address[]",
+								"name": "applicants",
+								"type": "address[]"
+							}
+						],
+						"internalType": "struct jobPortal.job_details",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_applicantAddress",
+						"type": "address"
+					}
+				],
+				"name": "fetchRating",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "hasApplied",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_jobId",
+						"type": "uint256"
+					}
+				],
+				"name": "jobApply",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/jobPortal.sol": "jobPortal"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/jobPortal.sol": {
+			"keccak256": "0x425502e732835007b32ef3e79f7744ebdece4b5983db8540266c68cb4755860e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d46329c35615e25f1aac2507b8f90dcf1274b5e51291db13766ff4258506121d",
+				"dweb:/ipfs/QmeNVp3cZu8EgN5XMbNarPg7BEMBJDjAwP2UgsC8uf1u88"
+			]
+		}
+	},
+	"version": 1
+}
